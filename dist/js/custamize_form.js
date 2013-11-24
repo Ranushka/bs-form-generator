@@ -75,6 +75,14 @@ $(document).on('keydown', '.form_select', function(e)
 
 
 
+$(document).on('keydown', '.help_text', function(e)
+{
+	$(this).parent().siblings().find('div .help-block').remove()
+	$(this).parent().siblings().find('div').append('<span class="help-block">'+ $(this).val()+'</span>')
+});
+
+
+
 
 
 

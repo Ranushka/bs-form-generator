@@ -65,7 +65,7 @@
     <section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         <!-- maksmall -->
         select element size
-        <select name="change_form_element_size" id="change_form_element_size">
+        <select class="form-control input-sm" name="change_form_element_size" id="change_form_element_size">
             <option value="">normal</option>
             <option value="input-sm">input-sm</option>
             <option value="input-lg">input-lg</option>
@@ -74,22 +74,39 @@
     
     <section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         <!-- maksmall -->
-        select element size
-        <select name="change_form_element_size" id="change_form_element_size">
-            <option value="">normal</option>
-            <option value="input-sm">input-sm</option>
-            <option value="input-lg">input-lg</option>
-        </select>
+        form display
+        <div class="btn-group btn-group-justified btn-group-sm" id="form_display" >
+          <label class="btn btn-default active">
+             in-line
+          </label>
+          <label class="btn btn-default" onclick="make_line_by()"> line by
+          </label>
+        </div>
     </section>
     
     <section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <button type="button" class="btn btn-default" id="generate_html">genarate code</button>
+        selact lable size
+        <select class="form-control input-sm" name="set_label_size" id="set_label_size">
+            <option value="col-xs-1">col-xs-1</option>
+            <option value="col-xs-2">col-xs-2</option>
+            <option value="col-xs-3" selected>col-xs-3</option>
+            <option value="col-xs-4">col-xs-4</option>
+            <option value="col-xs-5">col-xs-5</option>
+            <option value="col-xs-6">col-xs-6</option>
+            <option value="col-xs-7">col-xs-7</option>
+            <option value="col-xs-8">col-xs-8</option>
+            <option value="col-xs-9">col-xs-9</option>
+            <option value="col-xs-10">col-xs-10</option>
+            <option value="col-xs-11">col-xs-11</option>
+            <option value="col-xs-12">col-xs-12</option>
+        </select>
     </section>
 
     <section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         <button type="button" class="btn btn-default" id="generate_html">genarate code</button>
     </section>
 </div><!-- /.row -->
+
 
 
 
@@ -103,6 +120,8 @@
             </ol>
         
     </form>
+
+    
 
   </section>
 
@@ -121,34 +140,33 @@
 
     <div id="formElements">
 
-        <!-- <article class="form-group page-header">
+        <article class="form_group_ui page-header">
             <h3>Example page header <small>Subtext for header</small></h3>
-        </article> -->
+        </article>
       
-        <article class="form-group" data-inputtype="text">
-            <label for="" class="col-sm-3 control-label">Lable</label>
-            <div class="col-sm-9">
+        <article class="form-group form_group_ui" data-inputtype="text">
+            <label for="" class="col-xs-3 control-label">Lable</label>
+            <div class="col-xs-9">
                 <input type="text" class="form-control" id="" placeholder="Email">
             </div>
         </article>
-      
-        <article class="form-group" data-inputtype="password">
-            <label for="" class="col-sm-3 control-label">Password</label>
-            <div class="col-sm-9">
+        <article class="form-group form_group_ui" data-inputtype="password">
+            <label for="" class="col-xs-3 control-label">Password</label>
+            <div class="col-xs-9">
                 <input type="password" class="form-control" id="" placeholder="Password">
             </div>
         </article>
 
-        <article class="form-group" data-inputtype="textarea">
-            <label for="" class="col-sm-3 control-label">textarea</label>
-            <div class="col-sm-9">
+        <article class="form-group form_group_ui" data-inputtype="textarea">
+            <label for="" class="col-xs-3 control-label">textarea</label>
+            <div class="col-xs-9">
                 <textarea class="form-control" rows="3"></textarea>
             </div>
         </article>
 
-        <article class="form-group" data-inputtype="radio">
-            <label for="" class="col-sm-3 control-label">radio</label>
-            <div class="col-sm-9 radio_gp">
+        <article class="form-group form_group_ui" data-inputtype="radio">
+            <label for="" class="col-xs-3 control-label">radio</label>
+            <div class="col-xs-9 radio_gp">
                 <div class="radio">
                     <label>
                         <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -158,9 +176,9 @@
             </div>
         </article>
 
-        <article class="form-group" data-inputtype="checkbox">
-            <label for="" class="col-sm-3 control-label">checkbox</label>
-            <div class="col-sm-9 checkbox_gp">
+        <article class="form-group form_group_ui" data-inputtype="checkbox">
+            <label for="" class="col-xs-3 control-label">checkbox</label>
+            <div class="col-xs-9 checkbox_gp">
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -170,9 +188,9 @@
             </div>
         </article>
 
-       <article class="form-group" data-inputtype="select">
-            <label for="" class="col-sm-3 control-label">single select</label>
-            <div class="col-sm-9">
+       <article class="form-group form_group_ui" data-inputtype="select">
+            <label for="" class="col-xs-3 control-label">single select</label>
+            <div class="col-xs-9">
                 <select class="form-control">
                     <option>1</option>
                     <option>2</option>
@@ -180,9 +198,9 @@
             </div>
         </article>
 
-        <article class="form-group" data-inputtype="select_multiple">
-            <label for="" class="col-sm-3 control-label">multiple select</label>
-            <div class="col-sm-9">
+        <article class="form-group form_group_ui" data-inputtype="select_multiple">
+            <label for="" class="col-xs-3 control-label">multiple select</label>
+            <div class="col-xs-9">
                 <select multiple class="form-control">
                   <option>1</option>
                   <option>2</option>
@@ -193,9 +211,9 @@
             </div>
         </article>
 
-        <article class="form-group" data-inputtype="static">
-            <label for="" class="col-sm-3 control-label">static</label>
-            <div class="col-sm-9">
+        <article class="form-group form_group_ui" data-inputtype="static">
+            <label for="" class="col-xs-3 control-label">static</label>
+            <div class="col-xs-9">
                 <p class="form-control-static">email@example.com</p>
             </div>
         </article>
@@ -204,7 +222,7 @@
 
 
 
-        <article class="form-group">
+        <article class="form-group form_group_ui">
         </article>
     </div><!-- formElements -->
 
@@ -266,8 +284,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="dist/js/jquery-1.10.2.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
     <script src="dist/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
     
     <script src="dist/js/google-code-prettify/prettify.js"></script>
 

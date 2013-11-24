@@ -7,14 +7,14 @@ $(function() {
 		// 
 		// to make form elements dragable
 		// 
-		$( "#formElements .form-group" ).draggable({
+		$( "#formElements .form_group_ui" ).draggable({
 			appendTo: "body",
 			helper: "clone"
 		});
 
 		
 
-
+// $('#form_display').button('toggle')
 
 
 
@@ -25,7 +25,7 @@ $(function() {
 		{
 			activeClass: "new_Form_home_hilight",
 			hoverClass: "ui-state-hover",
-			accept: "#formElements .form-group",
+			accept: "#formElements .form_group_ui",
 
 			// accept: ":not(#help_text>span)",
 			drop: function( event, ui ) 
@@ -95,7 +95,7 @@ $(function() {
 
 
 		//TO DO---------------------------------------------------
-			$("#newForm .form-group>div").droppable(
+			$("#newForm .form_group_ui>div").droppable(
 			{ 
 			    accept: '#help_text>span',
 			    greedy: true,
@@ -162,7 +162,11 @@ $(function() {
 		// set_text_type_editing_conent_options
 		// 
 		function set_text_type_editing_conent_options () {
-			return get_label_edit() + get_placeholder_edit() + get_feld_name_edit() + get_feld_id_edit();
+			return get_label_edit() +
+			 get_placeholder_edit() + 
+			 get_feld_name_edit() + 
+			 get_feld_id_edit()+
+			 get_help_text();
 		}
 
 
@@ -170,7 +174,11 @@ $(function() {
 		// set_password_type_editing_conent_options
 		// 
 		function set_password_type_editing_conent_options () {
-			return get_label_edit() + get_placeholder_edit() + get_feld_name_edit() + get_feld_id_edit();
+			return get_label_edit() +
+			get_placeholder_edit() +
+			get_feld_name_edit() +
+			get_feld_id_edit()+
+			get_help_text();
 		}
 
 
@@ -178,7 +186,11 @@ $(function() {
 		// set_textarea_type_editing_conent_options
 		// 
 		function set_textarea_type_editing_conent_options () {
-			return get_label_edit() + get_placeholder_edit() + get_feld_name_edit() + get_feld_id_edit();
+			return get_label_edit() +
+			get_placeholder_edit() +
+			get_feld_name_edit() +
+			get_feld_id_edit()+
+			get_help_text();
 		}
 
 
@@ -186,7 +198,10 @@ $(function() {
 		// set_textarea_type_editing_conent_options
 		// 
 		function set_radio_type_editing_conent_options () {
-			return get_label_edit() + get_radio_edit() + get_feld_name_edit();
+			return get_label_edit() +
+			get_radio_edit() +
+			get_feld_name_edit()+
+			get_help_text();
 		}
 
 
@@ -194,7 +209,10 @@ $(function() {
 		// set_textarea_type_editing_conent_options
 		// 
 		function set_checkbox_type_editing_conent_options () {
-			return get_label_edit() + get_checkbox_edit() + get_feld_name_edit();
+			return get_label_edit() +
+			get_checkbox_edit() +
+			get_feld_name_edit()+
+			get_help_text();
 		}
 
 
@@ -202,7 +220,10 @@ $(function() {
 		// set_textarea_type_editing_conent_options
 		// 
 		function set_select_type_editing_conent_options () {
-			return get_label_edit() + get_select_edit() + get_feld_name_edit();
+			return get_label_edit() +
+			get_select_edit() +
+			get_feld_name_edit()+
+			get_help_text();
 		}
 
 
@@ -210,7 +231,10 @@ $(function() {
 		// set_textarea_type_editing_conent_options
 		// 
 		function set_select_multiple_type_editing_conent_options () {
-			return get_label_edit() + get_select_edit() + get_feld_name_edit();
+			return get_label_edit() +
+			get_select_edit() +
+			get_feld_name_edit()+
+			get_help_text();
 		}
 
 
@@ -218,7 +242,9 @@ $(function() {
 		// set_textarea_type_editing_conent_options
 		// 
 		function set_static_type_editing_conent_options () {
-			return get_label_edit() + get_placeholder_edit();
+			return get_label_edit() +
+			get_placeholder_edit()+
+			get_help_text();
 		}
 
 
@@ -255,22 +281,29 @@ $(function() {
 			return '<textarea class="form-control form_select" rows="3"></textarea>';
 		}
 
+		function get_help_text () {
+			return '<input type="text" class="form-control help_text" placeholder="Help info text for user">';
+		}
+
 
 
 
 		//
 		// change form elements sizes
 		// 
-		$( "#change_form_element_size" ).change(function () 
+		$( '#change_form_element_size' ).change(function () 
 			{
-				var selacted_value = $( "#change_form_element_size option:selected" ).val();
+				var selacted_value = $( '#change_form_element_size option:selected' ).val();
 
 				// to remove existing &input-sm &input-lg class
-				$('.form-control').removeClass('input-sm input-lg');
+				$('#newForm .form-control').removeClass('input-sm input-lg');
 
-				$('.form-control').addClass(selacted_value);
+				$('#newForm .form-control').addClass(selacted_value);
 
 		  	}).change();
+
+
+
 
 
 
@@ -299,6 +332,7 @@ $(function() {
 
 			// to remove class
 			$('#temp_form .ui-draggable').removeClass('ui-draggable')
+			$('#temp_form .form_group_ui').removeClass('form_group_ui')
 
 			// to remove Attributs
 			$('#temp_form article').removeAttr('data-inputtype')
@@ -335,5 +369,34 @@ $(function() {
 
 
 		
+
+
+		function make_line_by () {
+			var col_xs_sm_md_lg = 'col-xs-1 col-xs-2 col-xs-3 col-xs-4 col-xs-5 col-xs-6 col-xs-7 col-xs-8 col-xs-9 col-xs-10 col-xs-11 col-xs-12 col-sm-1 col-sm-2 col-sm-3 col-sm-4 col-sm-5 col-sm-6 col-sm-7 col-sm-8 col-sm-9 col-sm-10 col-sm-11 col-sm-12 col-md-1 col-md-2 col-md-3 col-md-4 col-md-5 col-md-6 col-md-7 col-md-8 col-md-9 col-md-10 col-md-11 col-md-12 col-lg-1 col-lg-2 col-lg-3 col-lg-4 col-lg-5 col-lg-6 col-lg-7 col-lg-8 col-lg-9 col-lg-10 col-lg-11 col-lg-12'
+			$('#newForm').find('[class*="col-"]').removeClass(col_xs_sm_md_lg);
+			$('#newForm').find('.form-group').removeClass('form-group');
+		}
+
+
+		function set_label_size () {
+
+			$('#newForm').find('.control-label').addClass(label_size)
+		}
+
+
+		$( '#set_label_size' ).change(function () 
+			{
+				var col_xs = 'col-xs-1 col-xs-2 col-xs-3 col-xs-4 col-xs-5 col-xs-6 col-xs-7 col-xs-8 col-xs-9 col-xs-10 col-xs-11 col-xs-12'
+				var selacted_label_size = $( '#set_label_size option:selected' ).val();
+				// to automaticaly assign the feld size
+				var selacted_feld_size = 12 - $( '#set_label_size option:selected' ).val().substr(7);
+
+				$('#newForm .control-label').removeClass(col_xs);
+				$('#newForm .control-label').addClass(selacted_label_size);
+				$('#newForm .control-label').siblings('div').removeClass(col_xs);
+				$('#newForm .control-label').siblings('div').addClass('col-xs-'+selacted_feld_size);
+
+		  	}).change();
+
 
 

@@ -20,7 +20,7 @@ body{
 	box-shadow: 0px 0px 7px -3px #333;
 }
 
-#newForm .form-group {
+#newForm .form_group_ui {
 margin-bottom: 0px;
 padding-bottom: 15px;
 }
@@ -75,6 +75,12 @@ border-top: 2px solid #CE04E9;
 .form-control.form_feld_id:focus,
 .form-control.form_feld_id:active {
 border-top: 2px solid #B7DD55;
+}
+
+.form-control.help_text,
+.form-control.help_text:focus,
+.form-control.help_text:active {
+border-top: 2px solid #81C9D3;
 }
 
 .form-control.form_radio,
