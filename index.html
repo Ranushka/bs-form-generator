@@ -49,6 +49,9 @@
       </div>
     </div>
 
+
+        
+
     <div class="container">
 
 <div class="row">
@@ -56,17 +59,39 @@
 
 
 
-<!-- maksmall -->
-select element size
-<select name="change_form_element_size" id="change_form_element_size">
-    <option value="">normal</option>
-    <option value="input-sm">input-sm</option>
-    <option value="input-lg">input-lg</option>
 
-</select>
 
-<br>
-<button type="button" class="btn btn-default" id="generate_html">genarate code</button>
+<div class="row">
+    <section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <!-- maksmall -->
+        select element size
+        <select name="change_form_element_size" id="change_form_element_size">
+            <option value="">normal</option>
+            <option value="input-sm">input-sm</option>
+            <option value="input-lg">input-lg</option>
+        </select>
+    </section>
+    
+    <section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <!-- maksmall -->
+        select element size
+        <select name="change_form_element_size" id="change_form_element_size">
+            <option value="">normal</option>
+            <option value="input-sm">input-sm</option>
+            <option value="input-lg">input-lg</option>
+        </select>
+    </section>
+    
+    <section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <button type="button" class="btn btn-default" id="generate_html">genarate code</button>
+    </section>
+
+    <section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <button type="button" class="btn btn-default" id="generate_html">genarate code</button>
+    </section>
+</div><!-- /.row -->
+
+
 
 <hr>
 
@@ -95,6 +120,10 @@ select element size
 
 
     <div id="formElements">
+
+        <!-- <article class="form-group page-header">
+            <h3>Example page header <small>Subtext for header</small></h3>
+        </article> -->
       
         <article class="form-group" data-inputtype="text">
             <label for="" class="col-sm-3 control-label">Lable</label>
@@ -119,21 +148,19 @@ select element size
 
         <article class="form-group" data-inputtype="radio">
             <label for="" class="col-sm-3 control-label">radio</label>
-            <div class="col-sm-9">
-                <div class="radio_gp">
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            <span>Option one </span>
-                        </label>
-                    </div>
+            <div class="col-sm-9 radio_gp">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <span>Option one </span>
+                    </label>
                 </div>
             </div>
         </article>
 
         <article class="form-group" data-inputtype="checkbox">
             <label for="" class="col-sm-3 control-label">checkbox</label>
-            <div class="col-sm-9">
+            <div class="col-sm-9 checkbox_gp">
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -232,7 +259,9 @@ select element size
 </div><!-- /.modal -->
 
 
-
+<ol id="form_delete_element">
+<h2>Delete Form group</h2>
+</ol>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

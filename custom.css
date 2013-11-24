@@ -77,6 +77,18 @@ border-top: 2px solid #CE04E9;
 border-top: 2px solid #B7DD55;
 }
 
+.form-control.form_radio,
+.form-control.form_radio:focus,
+.form-control.form_radio:active,
+.form-control.form_checkbox,
+.form-control.form_checkbox:focus,
+.form-control.form_checkbox:active,
+.form-control.form_select,
+.form-control.form_select:focus,
+.form-control.form_select:active{
+border-top: 2px solid #F5B15B;
+}
+
 .editing_panal .form-control .form_label{
 
 }
@@ -88,6 +100,11 @@ border-top: 2px solid #B7DD55;
 	border-top: transparent;
 	padding-top: 2px;
 	padding-bottom: 2px;
+}
+
+
+#newForm .panel{
+	margin-bottom: 5px;
 }
 
 #newForm .ui-draggable:hover{
@@ -121,4 +138,28 @@ cursor: pointer;
 	font-size: 11px;
 	height: 24px;
 
+}
+
+#form_delete_element{
+	/*background: red;*/
+	position: fixed;
+	height: 60px;
+	width: 100%;
+	content: " ";
+	bottom: 0;
+	list-style: none;
+}
+
+#form_delete_element h2{
+	line-height: 18px;
+	color: #FFF;
+}
+
+/*hilight when dreged to delete*/
+.form_delete_element_hilight{
+	background: rgba(255, 0, 0, 0.17);
+}
+
+li.panel.panel-default.ui-draggable{
+	list-style: none;
 }
