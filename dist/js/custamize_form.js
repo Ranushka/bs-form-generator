@@ -53,21 +53,24 @@ $(document).on('keyup', '.form_radio', function() {
 */
 
 
-		$(document).on('keydown', '.form_radio', function(e) {
+		$(document).on('keydown', '.form_radio', function(e)
+		{
 
-			console.log(e.keyCode);
-			if(e.keyCode == 13){
-		            var lines = $(this).val().split("\n");
-				    $.each(lines, function(n, elem) {
-				             // console.log(n);
-				    	$(event.target).parent().siblings().find('.radio').append('<label><input type="radio">'+elem+'</label>')
-
-					}); 
-		        }
-
-		    // console.log($(this).parent().siblings().find('.radio').html());
-
-			
+			// console.log(e.keyCode);
+			// if(e.keyCode == 13)
+			// {
+				$(event.target).parent().siblings().find('.radio_gp').empty();
+	            var lines = $(this).val().split("\n");
+			    $.each(lines, function(n, elem) {
+			             // console.log(n);
+			    	$(event.target).parent().siblings().find('.radio_gp').append('<div class="radio">'+
+						'<label>'+
+							'<input type="radio" name="optionsRadios" id="'+n+'" value="'+elem+'">'+
+							'<span>'+elem+'</span>'+
+						'</label>'+
+					'</div>');
+				}); 
+	        // }		
 		});
 
 
@@ -77,35 +80,6 @@ $(document).on('keyup', '.form_radio', function() {
 
 
 
-function radio_button_call (this_Element) {
-	var avalable_text = $(event.target).html()
-	$(event.target).html('<input type="text" class="form-control radio_btn_discrip" placeholder="radio text" onblur="var radio_discrip = $(this).val();$(this).parent().html(radio_discrip);" value="'+avalable_text+'">')
-	// $(event.target).html('<input type="text" class="form-control radio_btn_discrip" placeholder="radio text" onblur="replase_radio_disctiption_crerator($(this).val())" value="'+avalable_text+'">')
-
-				// console.log(this_Element.html())
-
-	$(this).keyup(
-		function(e)
-		{
-		  	if(e.keyCode == 13)
-		  	{
-		  		// $(this_Element).parent().html($(this_Element).parent().html())
-		  		// $(this_Element).html('<label onclick="radio_button_call($(this))"><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked><span>Option one </span></label>');
-				// console.log($(this_Element).parent().html())
-
-
-			}
-		}
-	);
-	// console.log($(event.target).html())
-
-	// alert('dsa');
-
-		
-}
-
-
-// function replase_radio_disctiption_crerator (valu) {
 
 	
 // }
