@@ -121,7 +121,7 @@
         
     </form>
 
-    
+
 
   </section>
 
@@ -263,10 +263,22 @@
       </div>
       <div class="modal-body">
 
-        <pre class="prettyprint linenums">
-            
-        </pre>
-        <!-- <textarea style="margin: 0px; width: 100%; height: 433px;" id="save"></textarea> -->
+
+    <ul class="nav nav-tabs" id="myTab">
+      <li class="active"><a href="#pretty" data-toggle="tab">pretty print</a></li>
+      <li><a href="#planetext" data-toggle="tab">plane text</a></li>
+      <li><a href="#preview" data-toggle="tab">preview</a></li>
+      <li><a href="#json" data-toggle="tab">json</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="pretty"><pre style="padding-top: 24px;" class="prettyprint linenums"></pre></div>
+      <div class="tab-pane" id="planetext"><textarea style="padding-top: 24px; margin: 0px; width: 100%; height: 433px;" id="save"></textarea></div>
+      <div class="tab-pane" id="preview"></div>
+      <div class="tab-pane" id="json"><textarea style="margin: 0px; width: 100%; height: 433px;" id="save"></textarea></div>
+    </div>
+        
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

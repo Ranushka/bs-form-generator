@@ -169,3 +169,8 @@ cursor: pointer;
 li.panel.panel-default.ui-draggable{
 	list-style: none;
 }
+
+
+.tab-pane {
+margin-top: -1px;
+}

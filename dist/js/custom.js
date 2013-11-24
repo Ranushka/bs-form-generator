@@ -345,7 +345,9 @@ $(function() {
 
 			var generated_html = $('#temp_form').html();
 
-			$('#output_html .modal-body>pre').text(generated_html);
+			$('#output_html .modal-body>.tab-content pre').text(generated_html);
+			$('#output_html .modal-body>.tab-content #planetext textarea').html(generated_html);
+			$('#output_html .modal-body>.tab-content #preview').html(generated_html);
 			$('#temp_form').empty();
 			prettyPrint();
 			$('#output_html').modal('show');
