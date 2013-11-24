@@ -9,6 +9,10 @@ body{
 	padding: 20px;
 }
 
+#newForm:hover li{
+	box-shadow: 0px 0px 4px -2px #6D6D6D;
+}
+
 #newForm li{
 	padding: 5px;
 }
@@ -16,11 +20,67 @@ body{
 	box-shadow: 0px 0px 7px -3px #333;
 }
 
+#newForm .form-group {
+margin-bottom: 0px;
+padding-bottom: 15px;
+}
 
-.panel-collapse {
+
+.editing_panal {
 
 	border-top: 1px dashed #ccc;
+	padding-top: 5px;
 }
+
+.editing_panal .form-control{
+	display: inline-block;
+	width: 47%;
+	margin: 0 1.5% ;
+	padding: 0 2px;
+	height: 24px;
+	border-radius: 0;
+	margin-bottom: 5px;
+}
+
+.editing_panal textarea.form-control{
+	height: 80px;
+}
+
+.editing_panal .form-control:focus,
+.editing_panal .form-control:active{
+	outline: none;
+	border: 1px #ccc solid;
+	box-shadow: none;
+}
+
+.form-control.form_label,
+.form-control.form_label:focus,
+.form-control.form_label:active{
+	border-top: 2px solid #E9E004;
+}
+
+.form-control.form_placeholder,
+.form-control.form_placeholder:focus,
+.form-control.form_placeholder:active{
+	border-top: 2px solid #5BB7F5;
+}
+
+.form-control.form_feld_name,
+.form-control.form_feld_name:focus,
+.form-control.form_feld_name:active {
+border-top: 2px solid #CE04E9;
+}
+
+.form-control.form_feld_id,
+.form-control.form_feld_id:focus,
+.form-control.form_feld_id:active {
+border-top: 2px solid #B7DD55;
+}
+
+.editing_panal .form-control .form_label{
+
+}
+
 
 
 {
@@ -50,3 +110,15 @@ line-height: 36px;
 cursor: pointer;
 }
 
+
+.form-control.radio_btn_discrip,
+.form-control.radio_btn_discrip:focus,
+.form-control.radio_btn_discrip:active{
+	outline: none;
+	border: 1px #ccc solid;
+	box-shadow: none;
+	padding: 2px;
+	font-size: 11px;
+	height: 24px;
+
+}
