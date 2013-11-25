@@ -29,21 +29,19 @@ $(document).on('keyup', '.form_feld_id', function() {
 $(document).on('keydown', '.form_radio', function(e)
 {
 
-	// console.log(e.keyCode);
-	// if(e.keyCode == 13)
-	// {
-		$(event.target).parent().siblings().find('.radio_gp').empty();
-        var lines = $(this).val().split("\n");
-	    $.each(lines, function(n, elem) {
-	             // console.log(n);
-	    	$(event.target).parent().siblings().find('.radio_gp').append('<div class="radio">'+
-				'<label>'+
-					'<input type="radio" name="optionsRadios" id="'+n+'" value="'+elem+'">'+
-					'<span>'+elem+'</span>'+
-				'</label>'+
-			'</div>');
-		}); 
-    // }		
+	$(event.target).parent().siblings().find('.radio_gp').empty();
+    var lines = $(this).val().split("\n");
+    $.each(lines, function(n, elem) {
+             // console.log(n);
+    	$(event.target).parent().siblings().find('.radio_gp').append('\n\t\t\t<div class="radio">'+
+			'\n\t\t\t\t<label>'+
+				'\n\t\t\t\t\t<input type="radio" name="optionsRadios" id="'+n+'" value="'+elem+'">'+
+				'\n\t\t\t\t\t<span>'+elem+'</span>'+
+			'\n\t\t\t\t</label>'+
+		'\n\t\t\t</div>');
+	});
+	$(event.target).parent().siblings().find('.radio_gp .radio:last-child').after('\n\t\t');
+		
 });
 
 
@@ -52,13 +50,14 @@ $(document).on('keydown', '.form_checkbox', function(e)
 	$(event.target).parent().siblings().find('.checkbox_gp').empty();
     var lines = $(this).val().split("\n");
     $.each(lines, function(n, elem) {
-    	$(event.target).parent().siblings().find('.checkbox_gp').append('<div class="checkbox">'+
-			'<label>'+
-				'<input type="checkbox" name="optionsRadios" id="'+n+'" value="'+elem+'">'+
-				'<span>'+elem+'</span>'+
-			'</label>'+
-		'</div>');
-	});	
+    	$(event.target).parent().siblings().find('.checkbox_gp').append('\n\t\t\t<div class="checkbox">'+
+			'\n\t\t\t\t<label>'+
+				'\n\t\t\t\t\t<input type="checkbox" name="optionsRadios" id="'+n+'" value="'+elem+'">'+
+				'\n\t\t\t\t\t<span>'+elem+'</span>'+
+			'\n\t\t\t\t</label>'+
+		'\n\t\t\t</div>');
+	});
+	$(event.target).parent().siblings().find('.checkbox_gp .checkbox:last-child').after('\n\t\t');
 });
 
 
@@ -69,8 +68,9 @@ $(document).on('keydown', '.form_select', function(e)
     var lines = $(this).val().split("\n");
     $.each(lines, function(n, elem) {
              // console.log(n);
-    	$(event.target).parent().siblings().find('select').append('<option>'+elem+'</option>');
+    	$(event.target).parent().siblings().find('select').append('\n\t\t\t\t<option>'+elem+'</option>');
 	});
+	$(event.target).parent().siblings().find('select .option:last-child').after('\n\t\t\t');
 });
 
 

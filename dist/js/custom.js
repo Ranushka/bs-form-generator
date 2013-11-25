@@ -14,9 +14,6 @@ $(function() {
 
 		
 
-// $('#form_display').button('toggle')
-
-
 
 		// 
 		// make dropable to create new form with fields
@@ -328,7 +325,11 @@ $(function() {
 			$('#temp_form .editing_panal').remove();
 
 			// to remove all <li>
+			$('#temp_form li').prepend('\n\t');
 			$('#temp_form li').contents().unwrap();
+			// $('#temp_form article').append('\b\b\b');
+			// $('#temp_form article').append('\t');
+			console.log($('#temp_form article').html())
 
 			// to remove class
 			$('#temp_form .ui-draggable').removeClass('ui-draggable')
@@ -340,16 +341,17 @@ $(function() {
 			$('#temp_form article').removeAttr('data-parent')
 			$('#temp_form article').removeAttr('href')
 
+			$('#temp_form article:last-child').after('\n');
 
 			
 
 			var generated_html = $('#temp_form').html();
 
 			$('#output_html .modal-body>.tab-content pre').text(generated_html);
+			prettyPrint();
 			$('#output_html .modal-body>.tab-content #planetext textarea').html(generated_html);
 			$('#output_html .modal-body>.tab-content #preview').html(generated_html);
 			$('#temp_form').empty();
-			prettyPrint();
 			$('#output_html').modal('show');
 			// alert(generated_html);
 		})
