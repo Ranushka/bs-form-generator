@@ -16,6 +16,10 @@
 	<!-- Custom styles for this template -->
 	<link href="custom.css" rel="stylesheet">
 
+
+
+<script src="dist/js/jquery-1.10.2.min.js"></script>
+<script src="validation/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Just for debugging purposes. Don't actually copy this line! -->
 	<!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -113,6 +117,12 @@
 <hr>
 
 
+<div id="validation_Scripts_container">
+
+</div>
+
+
+
 	<form class="form-horizontal" role="form">
 <!-- <ul class="list-group">
         <li class="list-group-item"><input type="checkbox">valida</li>
@@ -121,7 +131,8 @@
         <li class="list-group-item">Porta ac consectetur ac</li>
         <li class="list-group-item">Vestibulum at eros</li>
       </ul> -->
-			<ol id="newForm"></ol>
+
+		<ol id="newForm"></ol>
 		
 	</form>
 
@@ -220,7 +231,8 @@
     		</div>
     	</article>
 
-    	<article class="form-group form_group_ui">
+    	<article class="form-group form_group_ui" data-inputtype="static">
+    		<button type="button" class="btn btn-default">Default</button>button
     	</article>
 
     </div><!-- formElements -->
@@ -229,6 +241,23 @@
 	<div id="help_text">
 		<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
 	</div>
+	<div id="help_text">
+		<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</div>
+	<div id="help_text">
+		<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</div>
+	<div id="help_text">
+		<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</div>
+	<div id="help_text">
+		<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</div>
+	<div id="help_text">
+		<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</div>
+
+
 </form>
 
 
@@ -299,7 +328,7 @@
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="dist/js/jquery-1.10.2.min.js"></script>
+	
 	<script src="dist/js/jquery-ui-1.10.3.custom.min.js"></script>
 	<script src="dist/js/bootstrap.min.js"></script>
 	

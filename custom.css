@@ -155,6 +155,7 @@ cursor: pointer;
 	content: " ";
 	bottom: 0;
 	list-style: none;
+	z-index: -1;
 }
 
 #form_delete_element h2{
@@ -165,6 +166,7 @@ cursor: pointer;
 /*hilight when dreged to delete*/
 .form_delete_element_hilight{
 	background: rgba(255, 0, 0, 0.17);
+	z-index: 2;
 }
 
 li.panel.panel-default.ui-draggable{

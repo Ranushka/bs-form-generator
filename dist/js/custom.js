@@ -279,7 +279,7 @@ $(function() {
 		}
 
 		function get_help_text () {
-			return '<input type="text" class="form-control help_text" placeholder="Help info text for user">';
+			return '<input type="text" id="commentForm" class="form-control help_text" placeholder="Help info text for user">';
 		}
 
 
@@ -320,7 +320,13 @@ $(function() {
 			// $('#temp_form').html($('#newForm').html());
 			$('#temp_form').empty();
 
+
+
 			$('<form class="form-horizontal" role="form"></form>').append($('#newForm').html()).appendTo('#temp_form')
+
+			//add form validation
+			$('#temp_form form').before($('#validation_Scripts_container').html());
+
 
 			$('#temp_form .editing_panal').remove();
 
@@ -407,14 +413,15 @@ $(function() {
 		//
 		// change form validation option
 		// 
-		$( '#change_form_element_size' ).change(function () 
+		$( '#change_form_validation' ).change(function () 
 			{
-				var selacted_value = $( '#change_form_element_size option:selected' ).val();
-
+				var selacted_value = $( '#change_form_validation option:selected' ).val();
+				// alert(selacted_value)
 				switch (selacted_value)
 				{
 				case 'validate':
 				  add_validation();
+				  // alert('d')
 				  break;
 				case 'no_validation':
 				  remove_validation();
