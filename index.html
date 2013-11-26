@@ -29,24 +29,19 @@
   <body>
 
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  <a class="navbar-brand" href="#">Project name</a>
-		</div>
-		<div class="collapse navbar-collapse">
-		  <ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#contact">Contact</a></li>
-		  </ul>
-		</div><!--/.nav-collapse -->
-	  </div>
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Link</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <button type="button" class="btn btn-default" id="generate_html">genarate code</button>
+              </div>
+            </form>
+        </div>
 	</div>
 
 
@@ -103,7 +98,12 @@
 	</section>
 
 	<section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-		<button type="button" class="btn btn-default" id="generate_html">genarate code</button>
+        validation option
+        <select class="form-control input-sm" name="change_form_validation" id="change_form_validation">
+            <option value="">normal</option>
+            <option value="validate">validate</option>
+            <option value="no_validation">remove validation</option>
+        </select>
 	</section>
 </div><!-- /.row -->
 
@@ -114,7 +114,13 @@
 
 
 	<form class="form-horizontal" role="form">
-
+<!-- <ul class="list-group">
+        <li class="list-group-item"><input type="checkbox">valida</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul> -->
 			<ol id="newForm"></ol>
 		
 	</form>
@@ -133,93 +139,91 @@
 		
 
 <form class="form-horizontal" role="form">
-<div id="formElements">
+    <div id="formElements">
 
-	<article class="form_group_ui page-header">
-		<h3>Example page header <small>Subtext for header</small></h3>
-	</article>
+    	<article class="form_group_ui page-header">
+    		<h3>Example page header <small>Subtext for header</small></h3>
+    	</article>
 
-	<article class="form-group form_group_ui" data-inputtype="text">
-		<label for="" class="col-xs-3 control-label">Lable</label>
-		<div class="col-xs-9">
-			<input type="text" class="form-control" id="" placeholder="Email">
-		</div>
-	</article>
-	<article class="form-group form_group_ui" data-inputtype="password">
-		<label for="" class="col-xs-3 control-label">Password</label>
-		<div class="col-xs-9">
-			<input type="password" class="form-control" id="" placeholder="Password">
-		</div>
-	</article>
+    	<article class="form-group form_group_ui" data-inputtype="text">
+    		<label for="" class="col-xs-3 control-label">Lable</label>
+    		<div class="col-xs-9">
+    			<input type="text" class="form-control" id="" placeholder="Email">
+    		</div>
+    	</article>
 
-	<article class="form-group form_group_ui" data-inputtype="textarea">
-		<label for="" class="col-xs-3 control-label">textarea</label>
-		<div class="col-xs-9">
-			<textarea class="form-control" rows="3"></textarea>
-		</div>
-	</article>
+    	<article class="form-group form_group_ui" data-inputtype="password">
+    		<label for="" class="col-xs-3 control-label">Password</label>
+    		<div class="col-xs-9">
+    			<input type="password" class="form-control" id="" placeholder="Password">
+    		</div>
+    	</article>
 
-	<article class="form-group form_group_ui" data-inputtype="radio">
-		<label for="" class="col-xs-3 control-label">radio</label>
-		<div class="col-xs-9 radio_gp">
-			<div class="radio">
-				<label>
-					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					<span>Option one </span>
-				</label>
-			</div>
-		</div>
-	</article>
+    	<article class="form-group form_group_ui" data-inputtype="textarea">
+    		<label for="" class="col-xs-3 control-label">textarea</label>
+    		<div class="col-xs-9">
+    			<textarea class="form-control" rows="3"></textarea>
+    		</div>
+    	</article>
 
-	<article class="form-group form_group_ui" data-inputtype="checkbox">
-		<label for="" class="col-xs-3 control-label">checkbox</label>
-		<div class="col-xs-9 checkbox_gp">
-			<div class="checkbox">
-				<label>
-					<input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					Option one is this and that&mdash;be sure to include why it's great
-				</label>
-			</div>
-		</div>
-	</article>
+    	<article class="form-group form_group_ui" data-inputtype="radio">
+    		<label for="" class="col-xs-3 control-label">radio</label>
+    		<div class="col-xs-9 radio_gp">
+    			<div class="radio">
+    				<label>
+    					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    					<span>Option one </span>
+    				</label>
+    			</div>
+    		</div>
+    	</article>
 
-   	<article class="form-group form_group_ui" data-inputtype="select">
-		<label for="" class="col-xs-3 control-label">single select</label>
-		<div class="col-xs-9">
-			<select class="form-control">
-				<option>1</option>
-				<option>2</option>
-			</select>
-		</div>
-	</article>
+    	<article class="form-group form_group_ui" data-inputtype="checkbox">
+    		<label for="" class="col-xs-3 control-label">checkbox</label>
+    		<div class="col-xs-9 checkbox_gp">
+    			<div class="checkbox">
+    				<label>
+    					<input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    					Option one is this and that&mdash;be sure to include why it's great
+    				</label>
+    			</div>
+    		</div>
+    	</article>
 
-	<article class="form-group form_group_ui" data-inputtype="select_multiple">
-		<label for="" class="col-xs-3 control-label">multiple select</label>
-		<div class="col-xs-9">
-			<select multiple class="form-control">
-			  <option>1</option>
-			  <option>2</option>
-			  <option>3</option>
-			  <option>4</option>
-			  <option>5</option>
-			</select>
-		</div>
-	</article>
+       	<article class="form-group form_group_ui" data-inputtype="select">
+    		<label for="" class="col-xs-3 control-label">single select</label>
+    		<div class="col-xs-9">
+    			<select class="form-control">
+    				<option>1</option>
+    				<option>2</option>
+    			</select>
+    		</div>
+    	</article>
 
-	<article class="form-group form_group_ui" data-inputtype="static">
-		<label for="" class="col-xs-3 control-label">static</label>
-		<div class="col-xs-9">
-			<p class="form-control-static">email@example.com</p>
-		</div>
-	</article>
+    	<article class="form-group form_group_ui" data-inputtype="select_multiple">
+    		<label for="" class="col-xs-3 control-label">multiple select</label>
+    		<div class="col-xs-9">
+    			<select multiple class="form-control">
+    			  <option>1</option>
+    			  <option>2</option>
+    			  <option>3</option>
+    			  <option>4</option>
+    			  <option>5</option>
+    			</select>
+    		</div>
+    	</article>
 
+    	<article class="form-group form_group_ui" data-inputtype="static">
+    		<label for="" class="col-xs-3 control-label">static</label>
+    		<div class="col-xs-9">
+    			<p class="form-control-static">email@example.com</p>
+    		</div>
+    	</article>
 
+    	<article class="form-group form_group_ui">
+    	</article>
 
-
-
-	<article class="form-group form_group_ui">
-	</article>
-</div><!-- formElements -->
+    </div><!-- formElements -->
 
 
 	<div id="help_text">

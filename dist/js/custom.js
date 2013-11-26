@@ -404,3 +404,21 @@ $(function() {
 
 
 
+		//
+		// change form validation option
+		// 
+		$( '#change_form_element_size' ).change(function () 
+			{
+				var selacted_value = $( '#change_form_element_size option:selected' ).val();
+
+				switch (selacted_value)
+				{
+				case 'validate':
+				  add_validation();
+				  break;
+				case 'no_validation':
+				  remove_validation();
+				  break;
+				}
+
+		  	}).change();
