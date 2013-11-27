@@ -18,67 +18,50 @@
 		body{
 			width: 600px;
 			margin: auto;
+            margin-top: 60px;
 		}
 	</style>
 	<body>
 
+ 
 
 
-<script src="validation/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="validation/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
-<form class="form-horizontal" role="form">
-	<article class="page-header">
-    		<h3>Example page header <small>Subtext for header</small></h3>
-    	</article>
-	<article class="form-group">
-    		<label for="" class="col-xs-3 control-label">Lable</label>
-    		<div class="col-xs-9">
-    			<input type="text" class="form-control" id="" placeholder="Email">
-    		</div>
-    	</article>
-	<article class="form-group">
-    		<label for="" class="col-xs-3 control-label">Lable</label>
-    		<div class="col-xs-9">
-    			<input type="text" class="form-control" id="" placeholder="Email">
-    		</div>
-    	</article>
-	<article class="form-group">
-    		<label for="" class="col-xs-3 control-label">Password</label>
-    		<div class="col-xs-9">
-    			<input type="password" class="form-control" id="" placeholder="Password">
-    		</div>
-    	</article>
-	<article class="form-group">
-    		<label for="" class="col-xs-3 control-label">textarea</label>
-    		<div class="col-xs-9">
-    			<textarea class="form-control" rows="3"></textarea>
-    		</div>
-    	</article>
-	<article class="form-group">
-    		<label for="" class="col-xs-3 control-label">radio</label>
-    		<div class="col-xs-9 radio_gp">
-    			<div class="radio">
-    				<label>
-    					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-    					<span>Option one </span>
-    				</label>
-    			</div>
-    		</div>
-    	</article>
-	<article class="form-group">
-    		<label for="" class="col-xs-3 control-label">single select</label>
-    		<div class="col-xs-9">
-    			<select class="form-control">
-    				<option>1</option>
-    				<option>2</option>
-    			</select>
-    		</div>
-    	</article>
 
-    	<article class="form-group">
-    		<button type="button" class="btn btn-default">Default</button>button
-    	</article>
+
+<script src="validation/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="validation/validatr.min.js" type="text/javascript" charset="utf-8"></script>
+<script>$( document ).ready(function(){$("form").validatr()})</script>
+<form id="commentForm" class="form-horizontal" role="form">
+    <article class="form-group collapsed">
+            <label for="" class="col-xs-3 control-label">Lable</label>
+            <div class="col-xs-9">
+                <input name="field_id1" id="field_id1" type="text" class="form-control set_field_id" placeholder="Email" required="required">
+            </div>
+        </article>
+    <article class="form-group collapsed">
+            <label for="" class="col-xs-3 control-label">Lable</label>
+            <div class="col-xs-9">
+                <input name="field_id3" id="field_id3" type="text" class="form-control set_field_id" placeholder="Email">
+            </div>
+        </article>
+    <article class="form-group">
+            <label for="" class="col-xs-3 control-label">Lable</label>
+            <div class="col-xs-9">
+                <input name="field_id4" id="field_id4" type="text" class="form-control set_field_id" placeholder="Email" required="required">
+            </div>
+        </article>
+    <article class="form-group collapsed">
+            <label for="" class="col-xs-3 control-label">Lable</label>
+            <div class="col-xs-9">
+                <input name="field_id5" id="field_id5" type="text" class="form-control set_field_id" placeholder="Email">
+            </div>
+        </article>
+    <article class="form-group collapsed">
+            <input type="submit" value="Submit">
+            <button type="button" class="btn btn-default">Default</button>button
+        </article>
 </form>
+
 
 
 

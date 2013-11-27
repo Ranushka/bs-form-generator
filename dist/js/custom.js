@@ -13,7 +13,7 @@ $(function() {
 		});
 
 		
-
+		var globl_li_count = 1;
 
 		// 
 		// make dropable to create new form with fields
@@ -28,7 +28,7 @@ $(function() {
 			drop: function( event, ui ) 
 			{
 				// $item = $clone();]
-				var new_form_id = get_li_count();
+				var new_form_id = globl_li_count++;
 
 				var editing_conent_options = get_editing_conent_options(ui.draggable.closest('article').attr( "data-inputtype" ));
 
@@ -37,7 +37,14 @@ $(function() {
 						'data-toggle'	: 'collapse',
 						'data-parent'	: '#newForm',
 						'href'			: '#collapse'+new_form_id
-					} )
+					})
+				)
+
+				$(ui.draggable.closest('article').find('.set_field_id').attr(
+					{
+						'id'			: 'field_id'+new_form_id,
+						'name'			: 'field_id'+new_form_id
+					})
 				)
 
 				// var collapse_trigure = 'data-toggle="collapse" data-parent="#accordion" href="#collapse'+new_form_id+'" ';
@@ -47,7 +54,6 @@ $(function() {
 
 				// make_drop_to_dragable();
 				$( "#newForm" ).sortable();
-
 
 			}
 
@@ -62,7 +68,7 @@ $(function() {
 				helper: "clone"
 			});
 		}
-
+		
 
 		// 
 		// make dropable to delete form fields & elements
@@ -82,12 +88,6 @@ $(function() {
 		});// end fun droppable form_delete_element
 
 
-
-		function get_li_count ()
-		{
-			var n = $( "#newForm li" ).size();
-			return n;
-		}
 
 
 
@@ -163,6 +163,7 @@ $(function() {
 			 get_placeholder_edit() + 
 			 get_feld_name_edit() + 
 			 get_feld_id_edit()+
+			 get_validation_required()+
 			 get_help_text();
 		}
 
@@ -281,6 +282,11 @@ $(function() {
 		function get_help_text () {
 			return '<input type="text" id="commentForm" class="form-control help_text" placeholder="Help info text for user">';
 		}
+		// validation relate gets---------------------------------------------------
+
+		function get_validation_required () {
+			return '<label class="form-control-wraps"><input type="checkbox" class="required_feld" value="option1"> Required</label>';
+		}
 
 
 
@@ -322,7 +328,7 @@ $(function() {
 
 
 
-			$('<form class="form-horizontal" role="form"></form>').append($('#newForm').html()).appendTo('#temp_form')
+			$('<form id="commentForm" class="form-horizontal" role="form"></form>').append($('#newForm').html()).appendTo('#temp_form')
 
 			//add form validation
 			$('#temp_form form').before($('#validation_Scripts_container').html());
@@ -427,5 +433,4 @@ $(function() {
 				  remove_validation();
 				  break;
 				}
-
 		  	}).change();

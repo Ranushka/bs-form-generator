@@ -82,7 +82,16 @@ $(document).on('keydown', '.help_text', function(e)
 });
 
 
-
+$(document).on('keydown', '.form_select', function(e)
+{
+	$(event.target).parent().siblings().find('select').empty();
+    var lines = $(this).val().split("\n");
+    $.each(lines, function(n, elem) {
+             // console.log(n);
+    	$(event.target).parent().siblings().find('select').append('\n\t\t\t\t<option>'+elem+'</option>');
+	});
+	$(event.target).parent().siblings().find('select .option:last-child').after('\n\t\t\t');
+});
 
 
 
@@ -97,8 +106,3 @@ $(document).on('keydown', '.help_text', function(e)
 
 });// end document ready
 
-
-
-
-	
-// }

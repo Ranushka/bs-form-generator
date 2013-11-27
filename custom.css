@@ -33,7 +33,7 @@ padding-bottom: 15px;
 	padding-top: 5px;
 }
 
-.editing_panal .form-control{
+.editing_panal .form-control,.editing_panal .form-control-wraps{
 	display: inline-block;
 	width: 47%;
 	margin: 0 1.5% ;
