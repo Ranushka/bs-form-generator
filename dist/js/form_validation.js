@@ -1,30 +1,62 @@
 $(function() {
 
+	$('#change_form_validation').change(function () {
+	    if ($(this).is(":checked"))
+	    {
+	      
+	    	$('#change_form_validation_state').text('validation ON')
+	    	
+			// validation_path = 'validation/validatr.min.js';
+			// jquery_path = 'validation/jquery-1.10.2.min.js';
+			// $('#validation_Scripts_container').html('<script src="'+jquery_path+'" type="text/javascript" charset="utf-8"></script>\n'+
+			// 											'<script src="'+validation_path+'" type="text/javascript" charset="utf-8"></script>\n'+
+			// 											'<script>$( document ).ready(function(){$("form").validatr()})</script>\n')
+
+	    } else {
+	    	// $('#validation_Scripts_container').html(' ');
+	    	$('#change_form_validation_state').text('validation OFF');
+	    	// $('#validation_Scripts_container').html(' ');
+
+	    	$('#commentForm').attr('novalidate','novalidate');
+
+	    }
+	}).change();
 
 
 });// end document ready
 
 
-validation_path = 'validation/validatr.min.js';
-jquery_path = 'validation/jquery-1.10.2.min.js';
-
-function add_validation ()
-{
-	// add validation min and jqury
-	$('#validation_Scripts_container').append('<script src="'+jquery_path+'" type="text/javascript" charset="utf-8"></script>\n'+
-												'<script src="'+validation_path+'" type="text/javascript" charset="utf-8"></script>\n')
-
-	$('#validation_Scripts_container').append('<script>$( document ).ready(function(){$("form").validatr()})</script>\n')
-}
+//
+// change form validation option
+// 
 
 
 
 
 
-function remove_validation ()
-{
-	// body...
-}
+
+
+
+// $( '#change_form_validation' ).change(function () 
+// 	{
+// 		var selacted_value = $( '#change_form_validation option:selected' ).val();
+// 		// alert(selacted_value)
+// 		switch (selacted_value)
+// 		{
+// 		case 'validate':
+// 		  add_validation();
+// 		  // alert('d')
+// 		  break;
+// 		case 'no_validation':
+// 		  remove_validation();
+// 		  break;
+// 		}
+//   	}).change();
+
+
+
+
+
 
 
 
@@ -42,10 +74,32 @@ function remove_validation ()
 
 
 
-$(document).on('click', '.required_feld', function(e)
+$(document).on('change', '.required_feld', function(e)
 {
-	 // $(event.target).parent().parent().siblings().find('div .set_field_id').toggleClass('required');
-	 $(event.target).parent().parent().siblings().find('div .set_field_id').attr('required','');
+
+	$(this).change(function () {
+	    if ($(this).is(":checked"))
+	    {
+	       $(event.target).parent().parent().siblings().find('div .set_field_id').attr('required','required');
+	    } else {
+	       $(event.target).parent().parent().siblings().find('div .set_field_id').removeAttr('required');
+	    }
+	});
+
+
 });
+
+
+
+
+// $(document).on('click', '.required_feld', function(e)
+// {
+// 	 console.log($(event.target).parent().parent().siblings().find('div .set_field_id').attr('required'))
+// 	 if($(event.target).parent().parent().siblings().find('div .set_field_id').attr('required') == "required")
+// 	 {
+// 	 	$(event.target).parent().parent().siblings().find('div .set_field_id').removeAttr('required');
+// 	 }
+// 	 	$(event.target).parent().parent().siblings().find('div .set_field_id').attr('required','');
+// });
 
 

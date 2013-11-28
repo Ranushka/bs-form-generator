@@ -26,7 +26,7 @@ $(document).on('keyup', '.form_feld_id', function() {
 
 
 
-$(document).on('keydown', '.form_radio', function(e)
+$(document).on('keyup', '.form_radio', function(e)
 {
 
 	$(event.target).parent().siblings().find('.radio_gp').empty();
@@ -45,7 +45,7 @@ $(document).on('keydown', '.form_radio', function(e)
 });
 
 
-$(document).on('keydown', '.form_checkbox', function(e)
+$(document).on('keyup', '.form_checkbox', function(e)
 {
 	$(event.target).parent().siblings().find('.checkbox_gp').empty();
     var lines = $(this).val().split("\n");
@@ -62,7 +62,7 @@ $(document).on('keydown', '.form_checkbox', function(e)
 
 
 
-$(document).on('keydown', '.form_select', function(e)
+$(document).on('keyup', '.form_select', function(e)
 {
 	$(event.target).parent().siblings().find('select').empty();
     var lines = $(this).val().split("\n");
@@ -75,14 +75,14 @@ $(document).on('keydown', '.form_select', function(e)
 
 
 
-$(document).on('keydown', '.help_text', function(e)
+$(document).on('keyup', '.help_text', function(e)
 {
 	$(this).parent().siblings().find('div .help-block').remove()
 	$(this).parent().siblings().find('div').append('<span class="help-block">'+ $(this).val()+'</span>')
 });
 
 
-$(document).on('keydown', '.form_select', function(e)
+$(document).on('keyup', '.form_select', function(e)
 {
 	$(event.target).parent().siblings().find('select').empty();
     var lines = $(this).val().split("\n");
@@ -94,10 +94,48 @@ $(document).on('keydown', '.form_select', function(e)
 });
 
 
+$(document).on('keyup', '.form_feld_pattern', function(e)
+{
+	 $(this).parent().siblings().find('.set_field_id').attr('pattern', $(this).val());
+});
+
+
+$(document).on('change', '.form_feld_max_value', function(e)
+{
+	 $(this).parent().siblings().find('.set_field_id').attr('max', $(this).val());
+});
+
+
+$(document).on('keyup', '.form_feld_min_value', function(e)
+{
+	 $(this).parent().siblings().find('.set_field_id').attr('min', $(this).val());
+});
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).on('keyup', '.form_button_text', function(e)
+{
+	 $(this).parent().siblings().find('.set_field_id').attr('value', $(this).val());
+});
 
 
 

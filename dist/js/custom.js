@@ -12,6 +12,15 @@ $(function() {
 			helper: "clone"
 		});
 
+
+		$('#accordion_input_types_wraper').hover(function () {
+			$("#accordion_input_types_container").collapse('show')
+		},
+		function () 
+		{
+			$("#accordion_input_types_container").collapse('hide')
+		})
+
 		
 		var globl_li_count = 1;
 
@@ -46,6 +55,8 @@ $(function() {
 						'name'			: 'field_id'+new_form_id
 					})
 				)
+
+				// $(ui.draggable.closest('article').append('\n\n\t');
 
 				// var collapse_trigure = 'data-toggle="collapse" data-parent="#accordion" href="#collapse'+new_form_id+'" ';
         		var editingConent = '<div id="collapse'+new_form_id+'" class="panel-collapse collapse editing_panal"> '+editing_conent_options+' </div>'
@@ -134,9 +145,29 @@ $(function() {
 			  type_is = content_type;
 			  editing_conent_options = set_checkbox_type_editing_conent_options();
 			  break;
+			case 'button':
+			  type_is = content_type;
+			  editing_conent_options = set_button_editing_conent_options();
+			  break;
 			case 'select':
 			  type_is = content_type;
 			  editing_conent_options = set_select_type_editing_conent_options();
+			  break;
+			case 'email':
+			  type_is = content_type;
+			  editing_conent_options = set_email_type_editing_conent_options();
+			  break;
+			case 'number':
+			  type_is = content_type;
+			  editing_conent_options = set_number_type_editing_conent_options();
+			  break;
+			case 'date':
+			  type_is = content_type;
+			  editing_conent_options = set_date_type_editing_conent_options();
+			  break;
+			case 'url':
+			  type_is = content_type;
+			  editing_conent_options = set_url_type_editing_conent_options();
 			  break;
 			case 'select_multiple':
 			  type_is = content_type;
@@ -159,12 +190,13 @@ $(function() {
 		// set_text_type_editing_conent_options
 		// 
 		function set_text_type_editing_conent_options () {
-			return get_label_edit() +
-			 get_placeholder_edit() + 
+			return get_label_edit()+
+			 get_placeholder_edit()+ 
 			 get_feld_name_edit() + 
 			 get_feld_id_edit()+
-			 get_validation_required()+
-			 get_help_text();
+			 get_pattern_edit()+
+			 get_help_text()+
+			 get_validation_required();
 		}
 
 
@@ -172,11 +204,12 @@ $(function() {
 		// set_password_type_editing_conent_options
 		// 
 		function set_password_type_editing_conent_options () {
-			return get_label_edit() +
-			get_placeholder_edit() +
+			return get_label_edit()+
+			get_placeholder_edit()+
 			get_feld_name_edit() +
 			get_feld_id_edit()+
-			get_help_text();
+			get_help_text()+
+			get_validation_required();
 		}
 
 
@@ -184,33 +217,90 @@ $(function() {
 		// set_textarea_type_editing_conent_options
 		// 
 		function set_textarea_type_editing_conent_options () {
-			return get_label_edit() +
-			get_placeholder_edit() +
-			get_feld_name_edit() +
+			return get_label_edit()+
+			get_placeholder_edit()+
+			get_feld_name_edit()+
 			get_feld_id_edit()+
-			get_help_text();
+			get_pattern_edit()+
+			get_help_text()+
+			get_validation_required();
 		}
 
 
 		//
-		// set_textarea_type_editing_conent_options
+		// set_radio_type_editing_conent_options
 		// 
 		function set_radio_type_editing_conent_options () {
-			return get_label_edit() +
-			get_radio_edit() +
+			return get_label_edit()+
+			get_radio_edit()+
 			get_feld_name_edit()+
-			get_help_text();
+			get_help_text()+
+			get_validation_required();
 		}
 
 
 		//
-		// set_textarea_type_editing_conent_options
+		// set_checkbox_type_editing_conent_options
 		// 
 		function set_checkbox_type_editing_conent_options () {
-			return get_label_edit() +
-			get_checkbox_edit() +
+			return get_label_edit()+
+			get_checkbox_edit()+
 			get_feld_name_edit()+
-			get_help_text();
+			get_help_text()+
+			get_validation_required();
+		}
+
+		//
+		// set_email_type_editing_conent_options
+		// 
+		function set_email_type_editing_conent_options () {
+			return get_label_edit()+
+			 get_placeholder_edit()+ 
+			 get_feld_name_edit()+ 
+			 get_feld_id_edit()+
+			 get_pattern_edit()+
+			 get_help_text()+
+			 get_validation_required();
+		}
+
+		//
+		// set_email_type_editing_conent_options
+		// 
+		function set_number_type_editing_conent_options () {
+			return get_label_edit()+
+			 get_placeholder_edit()+ 
+			 get_feld_name_edit()+ 
+			 get_feld_id_edit()+
+			 get_feld_id_edit()+
+			get_min_value_edit()+
+			get_max_value_edit()+
+			 get_help_text()+
+			 get_validation_required();
+		}
+
+		//
+		// set_date_type_editing_conent_options
+		// 
+		function set_date_type_editing_conent_options () {
+			return get_label_edit()+
+			 get_placeholder_edit()+ 
+			 get_feld_name_edit() + 
+			 get_feld_id_edit()+
+			 get_help_text()+
+			 get_validation_required();
+		}
+
+		//
+		// set_url_type_editing_conent_options
+		// 
+		function set_url_type_editing_conent_options () {
+			return get_label_edit()+
+			 get_placeholder_edit()+ 
+			 get_feld_name_edit() + 
+			 get_feld_id_edit()+
+			 get_pattern_edit()+
+			 get_help_text()+
+			 get_validation_required();
 		}
 
 
@@ -218,10 +308,11 @@ $(function() {
 		// set_textarea_type_editing_conent_options
 		// 
 		function set_select_type_editing_conent_options () {
-			return get_label_edit() +
-			get_select_edit() +
+			return get_label_edit()+
+			get_select_edit()+
 			get_feld_name_edit()+
-			get_help_text();
+			get_help_text()+
+			get_validation_required();
 		}
 
 
@@ -229,10 +320,11 @@ $(function() {
 		// set_textarea_type_editing_conent_options
 		// 
 		function set_select_multiple_type_editing_conent_options () {
-			return get_label_edit() +
-			get_select_edit() +
+			return get_label_edit()+
+			get_select_edit()+
 			get_feld_name_edit()+
-			get_help_text();
+			get_help_text()+
+			get_validation_required();
 		}
 
 
@@ -240,8 +332,16 @@ $(function() {
 		// set_textarea_type_editing_conent_options
 		// 
 		function set_static_type_editing_conent_options () {
-			return get_label_edit() +
+			return get_label_edit()+
 			get_placeholder_edit()+
+			get_help_text();
+		}
+
+		//
+		// set_textarea_type_editing_conent_options
+		// 
+		function set_button_editing_conent_options () {
+			return get_button_text()+
 			get_help_text();
 		}
 
@@ -279,9 +379,27 @@ $(function() {
 			return '<textarea class="form-control form_select" rows="3"></textarea>';
 		}
 
+		function get_pattern_edit () {
+			return '<input type="text" class="form-control form_feld_pattern" placeholder="Accsepting pattern">';
+		}
+
+		function get_max_value_edit () {
+			return '<input type="number" class="form-control form_feld_max_value" placeholder="Set max value">';
+		}
+
+		function get_min_value_edit () {
+			return '<input type="number" class="form-control form_feld_min_value" placeholder="Set minimum value">';
+		}
+
 		function get_help_text () {
 			return '<input type="text" id="commentForm" class="form-control help_text" placeholder="Help info text for user">';
 		}
+
+		function get_button_text () {
+			return '<input type="text" class="form-control form_button_text" placeholder="Button text">';
+		}
+
+
 		// validation relate gets---------------------------------------------------
 
 		function get_validation_required () {
@@ -324,14 +442,19 @@ $(function() {
 			*/
 
 			// $('#temp_form').html($('#newForm').html());
-			$('#temp_form').empty();
-
-
-
-			$('<form id="commentForm" class="form-horizontal" role="form"></form>').append($('#newForm').html()).appendTo('#temp_form')
+			$('#temp_form form').empty().append($('#newForm').html()).appendTo('#temp_form form')
 
 			//add form validation
-			$('#temp_form form').before($('#validation_Scripts_container').html());
+			if ($('#change_form_validation').is(":checked"))
+		    {
+		    	validation_path = 'validation/validatr.min.js';
+				jquery_path = 'validation/jquery-1.10.2.min.js';
+
+				$('#temp_form #scripts_container').html('\n<!-- \n<script id="#jquery_script" src="'+jquery_path+'" type="text/javascript" charset="utf-8"></script>\n'+
+															'<script src="'+validation_path+'" type="text/javascript" charset="utf-8"></script>\n'+
+															'<script>$( document ).ready(function(){$("form").validatr()})</script>\n -->\n')
+
+		    }
 
 
 			$('#temp_form .editing_panal').remove();
@@ -341,11 +464,12 @@ $(function() {
 			$('#temp_form li').contents().unwrap();
 			// $('#temp_form article').append('\b\b\b');
 			// $('#temp_form article').append('\t');
-			console.log($('#temp_form article').html())
+			// console.log($('#temp_form article').html())
 
 			// to remove class
 			$('#temp_form .ui-draggable').removeClass('ui-draggable')
 			$('#temp_form .form_group_ui').removeClass('form_group_ui')
+			// $('#temp_form .form_group_ui').removeClass('form_group_ui')
 
 			// to remove Attributs
 			$('#temp_form article').removeAttr('data-inputtype')
@@ -360,10 +484,10 @@ $(function() {
 			var generated_html = $('#temp_form').html();
 
 			$('#output_html .modal-body>.tab-content pre').text(generated_html);
-			prettyPrint();
+			// prettyPrint();
 			$('#output_html .modal-body>.tab-content #planetext textarea').html(generated_html);
 			$('#output_html .modal-body>.tab-content #preview').html(generated_html);
-			$('#temp_form').empty();
+			$('#temp_form form').empty();
 			$('#output_html').modal('show');
 			// alert(generated_html);
 		})
@@ -416,21 +540,4 @@ $(function() {
 
 
 
-		//
-		// change form validation option
-		// 
-		$( '#change_form_validation' ).change(function () 
-			{
-				var selacted_value = $( '#change_form_validation option:selected' ).val();
-				// alert(selacted_value)
-				switch (selacted_value)
-				{
-				case 'validate':
-				  add_validation();
-				  // alert('d')
-				  break;
-				case 'no_validation':
-				  remove_validation();
-				  break;
-				}
-		  	}).change();
+		

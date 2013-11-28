@@ -18,49 +18,271 @@
 		body{
 			width: 600px;
 			margin: auto;
-            margin-top: 60px;
+			margin-top: 60px;
 		}
+
+input:invalid {
+  border: 1px solid rgb(228, 166, 175);
+}
+
+/*input:not(:focus):invalid {
+  outline: 2px solid red;
+}
+input:focus:invalid {
+  outline: 2px solid blue;
+}*/
+
+input:focus:invalid {
+  color: red;
+}
+
+
 	</style>
 	<body>
+
 
  
 
 
+	<div id="scripts_container">
 
-
-<script src="validation/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script id="#jquery_script" src="validation/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="validation/validatr.min.js" type="text/javascript" charset="utf-8"></script>
 <script>$( document ).ready(function(){$("form").validatr()})</script>
-<form id="commentForm" class="form-horizontal" role="form">
-    <article class="form-group collapsed">
-            <label for="" class="col-xs-3 control-label">Lable</label>
-            <div class="col-xs-9">
-                <input name="field_id1" id="field_id1" type="text" class="form-control set_field_id" placeholder="Email" required="required">
-            </div>
-        </article>
-    <article class="form-group collapsed">
-            <label for="" class="col-xs-3 control-label">Lable</label>
-            <div class="col-xs-9">
-                <input name="field_id3" id="field_id3" type="text" class="form-control set_field_id" placeholder="Email">
-            </div>
-        </article>
-    <article class="form-group">
-            <label for="" class="col-xs-3 control-label">Lable</label>
-            <div class="col-xs-9">
-                <input name="field_id4" id="field_id4" type="text" class="form-control set_field_id" placeholder="Email" required="required">
-            </div>
-        </article>
-    <article class="form-group collapsed">
-            <label for="" class="col-xs-3 control-label">Lable</label>
-            <div class="col-xs-9">
-                <input name="field_id5" id="field_id5" type="text" class="form-control set_field_id" placeholder="Email">
-            </div>
-        </article>
-    <article class="form-group collapsed">
-            <input type="submit" value="Submit">
-            <button type="button" class="btn btn-default">Default</button>button
-        </article>
+
+</div>
+	<form id="commentForm" class="form-horizontal" role="form" novalidate="novalidate">
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id1" id="field_id1" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id2" id="field_id2" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id3" id="field_id3" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id4" id="field_id4" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id5" id="field_id5" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id6" id="field_id6" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id7" id="field_id7" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id8" id="field_id8" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id9" id="field_id9" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id10" id="field_id10" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id11" id="field_id11" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id12" id="field_id12" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id13" id="field_id13" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id14" id="field_id14" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id15" id="field_id15" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id16" id="field_id16" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id17" id="field_id17" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id18" id="field_id18" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id19" id="field_id19" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id20" id="field_id20" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id21" id="field_id21" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id22" id="field_id22" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id23" id="field_id23" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id24" id="field_id24" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id25" id="field_id25" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id26" id="field_id26" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id27" id="field_id27" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id28" id="field_id28" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id29" id="field_id29" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id30" id="field_id30" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id31" id="field_id31" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id32" id="field_id32" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id33" id="field_id33" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id34" id="field_id34" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id35" id="field_id35" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id36" id="field_id36" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id37" id="field_id37" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
+	<article class="form-group">
+		<label for="" class="col-xs-3 control-label">Text</label>
+		<div class="col-xs-9">
+			<input name="field_id38" id="field_id38" type="text" class="form-control set_field_id" placeholder="input-type TEXT" min="" max="">
+		</div>
+	</article>
 </form>
+
+
 
 
 
