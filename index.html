@@ -28,8 +28,9 @@
   </head>
 
   <body>
+<div class="ui-layout-north">
 
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="navbar navbar-inverse" role="navigation" style="border-radius: 0;margin-bottom: 0;">
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">Brand</a>
@@ -45,109 +46,17 @@
 		</div>
 	</div>
 
-
-		
-
-	<div class="container">
-
-<div class="row">
-  <section class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-
-
-
-
-
-<div class="row">
-	<section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-		<!-- maksmall -->
-		select element size
-		<select class="form-control input-sm" name="change_form_element_size" id="change_form_element_size">
-			<option value="">normal</option>
-			<option value="input-sm">input-sm</option>
-			<option value="input-lg">input-lg</option>
-		</select>
-	</section>
-	
-	<section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-		<!-- maksmall -->
-		form display
-		<div class="btn-group btn-group-justified btn-group-sm" id="form_display" >
-		  <label class="btn btn-default active">
-			 in-line
-		  </label>
-		  <label class="btn btn-default" onclick="make_line_by()"> line by
-		  </label>
-		</div>
-	</section>
-	
-	<section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-		selact lable size
-		<select class="form-control input-sm" name="set_label_size" id="set_label_size">
-			<option value="col-xs-1">col-xs-1</option>
-			<option value="col-xs-2">col-xs-2</option>
-			<option value="col-xs-3" selected>col-xs-3</option>
-			<option value="col-xs-4">col-xs-4</option>
-			<option value="col-xs-5">col-xs-5</option>
-			<option value="col-xs-6">col-xs-6</option>
-			<option value="col-xs-7">col-xs-7</option>
-			<option value="col-xs-8">col-xs-8</option>
-			<option value="col-xs-9">col-xs-9</option>
-			<option value="col-xs-10">col-xs-10</option>
-			<option value="col-xs-11">col-xs-11</option>
-			<option value="col-xs-12">col-xs-12</option>
-		</select>
-	</section>
-
-	<section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-		validation option
-		<div class="btn btn-default btn-sm">
-			<label style="margin: 0;font-weight: 100;">
-				<input type="checkbox" name="change_form_validation" style="margin: 0;" id="change_form_validation">
-				<span id="change_form_validation_state">validation OFF</span>
-			</label>
-		</div>
-		
-
-	</section>
-</div><!-- /.row -->
-
-
-
-
-<hr>
-
-
-<div id="validation_Scripts_container">
-
 </div>
 
 
 
-	<form class="form-horizontal" role="form">
-<!-- <ul class="list-group">
-		<li class="list-group-item"><input type="checkbox">valida</li>
-		<li class="list-group-item">Dapibus ac facilisis in</li>
-		<li class="list-group-item">Morbi leo risus</li>
-		<li class="list-group-item">Porta ac consectetur ac</li>
-		<li class="list-group-item">Vestibulum at eros</li>
-	  </ul> -->
-
-		<ol id="newForm"></ol>
-		
-	</form>
-
-
-
-  </section>
 
 
 
 
 
-  <section class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-	
+<div class="ui-layout-east">
 
-		
 
 <form class="form-horizontal" role="form">
 	<div id="formElements">
@@ -291,31 +200,106 @@
 	<div id="help_text">
 		<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
 	</div>
-
-
 </form>
 
 
-
-
-
-
-
-
-  </section>
 </div>
 
 
 
+<div class="ui-layout-center">
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="row">
+		<section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			<!-- maksmall -->
+			select element size
+			<select class="form-control input-sm" name="change_form_element_size" id="change_form_element_size">
+				<option value="">normal</option>
+				<option value="input-sm">input-sm</option>
+				<option value="input-lg">input-lg</option>
+			</select>
+		</section>
+		
+		<section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			<!-- maksmall -->
+			form display
+			<div class="btn-group btn-group-justified btn-group-sm" id="form_display" >
+			  <label class="btn btn-default active">
+				 in-line
+			  </label>
+			  <label class="btn btn-default" onclick="make_line_by()"> line by
+			  </label>
+			</div>
+		</section>
+		
+		<section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			selact lable size
+			<select class="form-control input-sm" name="set_label_size" id="set_label_size">
+				<option value="col-xs-1">col-xs-1</option>
+				<option value="col-xs-2">col-xs-2</option>
+				<option value="col-xs-3" selected>col-xs-3</option>
+				<option value="col-xs-4">col-xs-4</option>
+				<option value="col-xs-5">col-xs-5</option>
+				<option value="col-xs-6">col-xs-6</option>
+				<option value="col-xs-7">col-xs-7</option>
+				<option value="col-xs-8">col-xs-8</option>
+				<option value="col-xs-9">col-xs-9</option>
+				<option value="col-xs-10">col-xs-10</option>
+				<option value="col-xs-11">col-xs-11</option>
+				<option value="col-xs-12">col-xs-12</option>
+			</select>
+		</section>
+
+		<section class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			validation option
+			<div class="btn btn-default btn-sm">
+				<label style="margin: 0;font-weight: 100;">
+					<input type="checkbox" name="change_form_validation" style="margin: 0;" id="change_form_validation">
+					<span id="change_form_validation_state">validation OFF</span>
+				</label>
+			</div>
+		</section>
+	</div>
+	<hr>
+<form class="form-horizontal" role="form">
+	<ol id="newForm"></ol>
+</form>
+
+</div>
+
+</div>
+
+
+<!-- 
+<div class="ui-layout-south">South</div>
+<div class="ui-layout-west">West</div> -->
+
+
+	
 
 
 
 
-					<!-- <label onclick="radio_button_call($(this))"> -->
 
 
 
-	</div><!-- /.container -->
+
+
+
+
+
+
+
+
+<!-- <div id="validation_Scripts_container">
+
+</div> -->
+
+
+
+	
+
 
 <!-- <button type="button" data-toggle="modal" data-target="#output_html">Launch modal</button> -->
 
@@ -371,6 +355,10 @@
 	<script src="dist/js/jquery-1.10.2.min.js"></script>
 	<script src="dist/js/jquery-ui-1.10.3.custom.min.js"></script>
 	<script src="dist/js/bootstrap.min.js"></script>
+	<script src="dist/js/jquery.layout-latest.min.js"></script>
+
+
+	<!-- ????????????????????????? -->
 	<script src="dist/js/google-code-prettify/prettify.js"></script>
 
 

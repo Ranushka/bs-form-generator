@@ -1,4 +1,21 @@
 $(function() {
+
+
+
+	$('body').layout({ 
+		// applyDemoStyles: true,
+		north__spacing_open: 0
+		,north__spacing_closed: 0
+
+		,east: {
+			size:					350
+		,	togglerTip_open:		"Close East Pane"
+		,	togglerTip_closed:		"Open East Pane"
+		,	resizerTip_open:		"Resize East Pane"
+		}
+	 });
+
+
 		$( "#catalog" ).accordion();
 		
 		

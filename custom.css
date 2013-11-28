@@ -180,3 +180,21 @@ margin-top: -1px;
 
 .modal-dialog {
 width: 80%;}
+
+
+
+.ui-layout-north .ui-layout-pane{
+padding: 0;
+}
+
+.ui-layout-resizer{
+background: #efefef;
+}
+.ui-layout-toggler{
+background: #ccc;
+
+}
+
+.ui-layout-pane-east{
+	padding: 0 10px 
+}
