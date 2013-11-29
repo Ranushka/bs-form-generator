@@ -15,11 +15,14 @@ body{
 }
 
 #newForm li{
-	padding: 5px;
+padding: 5px;
+margin-bottom: 2px;
+
 }
 #newForm li:hover{
-	box-shadow: 0px 0px 7px -3px #333;
+	box-shadow: 0px 0px 3px -1px #7E7E7E;
 }
+
 
 #newForm .form_group_ui {
 margin-bottom: 0px;
@@ -112,6 +115,15 @@ border-top: 2px solid #F5B15B;
 
 #newForm .panel{
 	margin-bottom: 5px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 0 #fff;
+	box-shadow: 0 0 0 #fff;
+	border: 1px solid #fff;
+}
+
+
+.ui-layout-pane-center-hover #newForm .panel{
+	border: 1px solid #efefef;
 }
 
 #newForm .ui-draggable:hover{
@@ -198,3 +210,5 @@ background: #ccc;
 .ui-layout-pane-east{
 	padding: 0 10px 
 }
+
+
